@@ -56,7 +56,7 @@ pip install uv
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/sybex-node-python.git
+git clone https://github.com/sybexoracle/sybex-node-python.git
 cd sybex-node-python
 ```
 
@@ -64,11 +64,7 @@ cd sybex-node-python
 
 ```bash
 # Install all dependencies
-uv pip install -e .
-
-# Or install from pyproject.toml directly
-uv pip install -r pyproject.toml
-```
+uv sync
 
 ### 3. Set Up IPFS (Optional)
 
@@ -306,7 +302,7 @@ uv run flake8 .
 
 ## License
 
-Copyright (c) 2025 Sybex. All rights reserved.
+Copyright (c) 2025 SybexOracle. All rights reserved.
 
 ---
 
