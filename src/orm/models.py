@@ -1,0 +1,12 @@
+from tortoise import Model
+from tortoise import fields
+
+
+class QuestionModel(Model):
+    id = fields.IntField(pk=True)
+    question_text = fields.CharField(max_length=255)
+    question_type = fields.CharField(max_length=50)
+    created_at = fields.DatetimeField(auto_now_add=True)
+
+    class Meta:  # type: ignore
+        table = "questions"

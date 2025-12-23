@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+from eth_utils.currency import to_wei
 
 load_dotenv()
 
@@ -14,6 +15,12 @@ IPFS_NODE_URL = os.getenv("IPFS_NODE_URL", "http://localhost:5001")
 GRAPHQL_API_URL = os.getenv(
     "GRAPHQL_API_URL", "https://graph.sybex.app/subgraphs/name/sybex/graphql"
 )
+
+AGENTIC_BASE_URL = os.getenv("AGENTIC_BASE_URL", "https://openrouter.ai/api/v1")
+AGENTIC_API_KEY = os.getenv("AGENTIC_API_KEY", "")
+AGENTIC_MODEL = os.getenv("AGENTIC_MODEL", "gpt-4o-mini")
+
+MIN_BALANCE_WEI = to_wei(0.01, "ether")
 
 SYSTEM_PROMPT = """You are a Multi-Agentic Research Resolver designed to determine factual outcome for prediction markets.
 
