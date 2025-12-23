@@ -17,4 +17,4 @@ class NewsAPIAggregator:
                 "apiKey": NEWSAPI_API_KEY,
             },
         )
-        return all_articles.text
+        return all_articles.json()
