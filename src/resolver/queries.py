@@ -18,19 +18,14 @@ query QuestionAskeds {
 """
 )
 
-GET_ANSWERS_QUERY = gql(
+GET_ANSWERS_BY_ID = gql(
     """
-query AnswerProvideds {
-    answerProvideds {
-        questionId
-        resolver
-        transactionHash
-        id
-        blockTimestamp
-        blockNumber
-        answerData
-    }
+query GET_ANSWERS($questionId: BigInt!) {
+  answerProvideds(where: { questionId: $questionId }) {
+    id
+    transactionHash
+    answerData
   }
+}
     """
 )
-
