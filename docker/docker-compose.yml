@@ -1,0 +1,12 @@
+services:
+  sybex-node-ipfs:
+    container_name: sybex-node-ipfs
+    # kobo/ipfs:latest
+    image: ipfs/kubo:latest
+    ports:
+      - "4001:4001"
+      - "5001:5001"
+      - "8080:8080"
+    volumes:
+      - ./ipfs_data:/data/ipfs
+    restart: unless-stopped
